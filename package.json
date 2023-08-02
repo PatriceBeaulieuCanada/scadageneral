@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@syncfusion/ej2-base": "^22.2.5",
+    "@syncfusion/ej2-react-lists": "^22.2.5",
     "@syncfusion/ej2-react-navigations": "^22.2.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
