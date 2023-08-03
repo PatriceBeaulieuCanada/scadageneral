@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { registerLicense } from '@syncfusion/ej2-base';
+import _app from './_app';
 
 // Registering Syncfusion license key
 registerLicense('ORg4AjUWIQA/Gnt2V1hiQlZPd11dXmJWd1p/THNYflR1fV9DaUwxOX1dQl9gSXZTdERiW3hadHFTR2E=');
@@ -13,7 +14,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   // <React.StrictMode>
-    <App />
+    <_app />
   // </React.StrictMode>
 );
 

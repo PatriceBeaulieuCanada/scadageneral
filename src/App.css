@@ -68,6 +68,12 @@ html,body{
 /* ce sont les icones de material UI */
 /* https://ej2.syncfusion.com/react/documentation/appearance/icons#material */
 
+
+
+#dockSidebar .icon-user::before{
+  content: '\e424';
+}
+
 #dockSidebar .home::before {
   content: '\e424';
 }
