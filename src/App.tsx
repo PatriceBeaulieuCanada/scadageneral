@@ -2,16 +2,10 @@ import {useRef} from 'react';
 import { SidebarComponent,TreeViewComponent } from '@syncfusion/ej2-react-navigations';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import TreeView from './TreeView/TreeView';
-import TestView from './Views/TestView';
+import FinitionShipping from './Views/FinitionShipping';
 import './App.css';
 
 function App() {
-
-  let sidebarObj: SidebarComponent;
-   
-  function onCreate(): void {
-      sidebarObj.element.style.visibility='';
-  }
 
   let sidebarobj:any = useRef<SidebarComponent>(null);
 
@@ -54,7 +48,7 @@ const handleNodeSelected = (args:any) =>{
                      <div>
                      <Router>
                           <Routes>
-                          <Route path="/" element={<TestView/>}/>
+                          <Route path="/" element={<FinitionShipping/>}/>
                           {/* <Route path="/test2View" element={<Test2View/>}/> */}
                          </Routes>
                       </Router>

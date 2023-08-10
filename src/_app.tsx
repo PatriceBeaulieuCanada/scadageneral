@@ -3,8 +3,7 @@ import { SidebarComponent } from '@syncfusion/ej2-react-navigations';
 import { TreeViewComponent, ToolbarComponent, ItemsDirective, ItemDirective } from '@syncfusion/ej2-react-navigations';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import './_app.css';
-import TestView from './Views/TestView';
-import Test2View from './Views/Test2View';
+
 
 const  _app = () =>{
 
@@ -108,8 +107,8 @@ const  _app = () =>{
                     <div className="sidebar-content">
                     <Router>
                         <Routes>
-                            <Route path="/" element={<TestView/>}/>
-                            <Route path="/test2View" element={<Test2View/>}/>
+                            {/* <Route path="/" element={<TestView/>}/>
+                            <Route path="/test2View" element={<Test2View/>}/> */}
                         </Routes>      
                     </Router>
                     </div>

@@ -77,55 +77,14 @@ html,body{
   width: 25px;
 }
 
-
-/* CSS de l'image du titre */
-/* .e-tbar-menu-icon:before {
-  content: '\e804';
-  font-family: 'fontello';
-  font-size: 24px;
-  background-color: #2177d0;    
-} */
-
-/* CSS du text du titre */
-/* .e-folder{
-  color: #f6f6f6;
-  font-size: 28px;
-  font-style: italic;
-  background-color: #2177d0;
-      
-} */
-
-/* .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child {
-  margin-left: 0px;
-}
-
-.e-toolbar .e-toolbar-items:first-child>.e-toolbar-item:last-child, .e-toolbar .e-toolbar-items:first-child>.e-toolbar-right .e-toolbar-item:last-child {
-  margin-right: 0px;
-}
-
-#e-tbr-btn_0{
-  background-color: #2177d0;
-}
-
-.titleStyle{
-  background-color: #2177d0;
-}
-
-.e-toolbar .e-toolbar-item {
-  background: #2177d0;
-} */
-
 /***********************CSS du sidebar********************************************/
-
-/* .sidebar-treeview{
-  position: relative;
-} */
 
 
 .sidebar-treeview .main-treeview .icon {
   font-family: 'fontello';
-  font-size: 24px;
-  margin: -4px 0px;
+  font-size: 20px;
+  margin: 1px 0px;
+  padding-left: 1px;
 }
 
 .sidebar-treeview .e-treeview,
@@ -147,12 +106,6 @@ html,body{
     padding: 0px;
     margin: 0px;
     
-}
-
-/* CSS des images */
-.sidebar-treeview .e-treeview .e-text-content {
-    padding-left: 18px;
-    color:#757575;
 }
 
 /* CSS du text */
