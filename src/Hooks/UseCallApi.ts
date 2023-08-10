@@ -3,16 +3,16 @@ const querystring = require('querystring');
 
 const UseCallApi=async(param:any) =>{
 
-    // if(param.action=='GetAllHumainReason') {
-    //     try {
-	// 		const listHumainReason = await axios.get('http://itvxscada:5001/api/StopReason/GetAllHumainReason');		
-	// 		return listHumainReason.data;
-	// 	} catch (err) {
-	// 		// Handle Error Here
-	// 		console.error(err);
-	// 		return [];
-	// 	}        
-    // }
+    if(param.action=='getUserBeaulieu') {
+        try {
+			const allUser = await axios.get('http://itvxscada:5001/api/Scada/GetAllUsers');		
+			return allUser.data;
+		} catch (err) {
+			// Handle Error Here
+			console.error(err);
+			return [];
+		}        
+    }
 
 	// if(param.action=='GetAllReducedSpeed') {
     //     try {

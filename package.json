@@ -5,6 +5,8 @@
   "dependencies": {
     "@syncfusion/ej2-base": "^22.2.5",
     "@syncfusion/ej2-react-buttons": "^22.2.8",
+    "@syncfusion/ej2-react-calendars": "^22.2.8",
+    "@syncfusion/ej2-react-grids": "^22.2.8",
     "@syncfusion/ej2-react-lists": "^22.2.5",
     "@syncfusion/ej2-react-navigations": "^22.2.7",
     "@testing-library/jest-dom": "^5.17.0",
@@ -15,6 +17,7 @@
     "@types/react": "^18.2.18",
     "@types/react-dom": "^18.2.7",
     "axios": "^1.4.0",
+    "querystring": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2",
