@@ -1,6 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import { ToolbarComponent, ItemsDirective, ItemDirective,SidebarComponent,TreeViewComponent } from '@syncfusion/ej2-react-navigations';
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import {useRef} from 'react';
+import { SidebarComponent,TreeViewComponent } from '@syncfusion/ej2-react-navigations';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import TreeView from './TreeView/TreeView';
 import TestView from './Views/TestView';
@@ -8,17 +7,13 @@ import './App.css';
 
 function App() {
 
-
   let sidebarObj: SidebarComponent;
    
   function onCreate(): void {
       sidebarObj.element.style.visibility='';
   }
-    
 
   let sidebarobj:any = useRef<SidebarComponent>(null);
-  
-  let folderEle: string = '<div class= "e-folder"><div class= "e-folder-name">Scada</div></div>';
 
   //toggle the sidebar
   const toolbarCliked = (): void => {
@@ -51,12 +46,8 @@ const handleNodeSelected = (args:any) =>{
                 </div>
         </SidebarComponent>
         <div id="head">
-            <ToolbarComponent  className='titleStyle' clicked={toolbarCliked}>
-              <ItemsDirective>
-                <ItemDirective prefixIcon="e-tbar-menu-icon tb-icons" tooltipText="Menu"></ItemDirective>
-                <ItemDirective template={folderEle}></ItemDirective>
-              </ItemsDirective>
-            </ToolbarComponent>
+          <img className='imgHeader' src='/menu.png' alt='menuIcon' onClick={toolbarCliked}/>
+          <label className='lblHeader'>Scada</label>
          </div>
 
          <div id="maincontent" className="content">

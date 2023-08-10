@@ -27,6 +27,9 @@ html,body{
 #head{
   min-height: 33px;
   height: 4%;
+  background-color: #2177d0;
+  display: flex;
+  align-items: center;
 }
 
 .content{
@@ -60,24 +63,39 @@ html,body{
 
 /***********************CSS de la bare de titre********************************************/
 
+.lblHeader{
+  color: #f1f1f1;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+  margin-left: 20px;
+}
+
+.imgHeader{
+  margin-left: 10px;
+  height: 25px;
+  width: 25px;
+}
+
+
 /* CSS de l'image du titre */
-.e-tbar-menu-icon:before {
-  content: '\e806';
+/* .e-tbar-menu-icon:before {
+  content: '\e804';
   font-family: 'fontello';
   font-size: 24px;
   background-color: #2177d0;    
-}
+} */
 
 /* CSS du text du titre */
-.e-folder{
+/* .e-folder{
   color: #f6f6f6;
   font-size: 28px;
   font-style: italic;
   background-color: #2177d0;
       
-}
+} */
 
-.e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child {
+/* .e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child {
   margin-left: 0px;
 }
 
@@ -95,7 +113,7 @@ html,body{
 
 .e-toolbar .e-toolbar-item {
   background: #2177d0;
-}
+} */
 
 /***********************CSS du sidebar********************************************/
 
@@ -141,7 +159,7 @@ html,body{
 .ename{
     color: #000;
     margin-left: 5px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .sidebar-treeview .main-treeview .icon-microchip::before {
