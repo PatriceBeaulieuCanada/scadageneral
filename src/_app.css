@@ -2,11 +2,10 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    
   }
   
   html,body{
-    height: 100%;  
+    height: 100%;
   } 
   
   @import url("https://cdn.syncfusion.com/ej2/material.css");
@@ -23,76 +22,27 @@
   @import url("https://cdn.syncfusion/ej2-richtexteditor/styles/material.css");
   @import url("https://cdn.syncfusion/ej2-treegrid/styles/material.css");
 
-/* Specifies sample level styles for sidebar*/
-#responsive-wrapper.control-section {
-    padding: 0;
-}
 
 #responsive-wrapper .sidebar-treeview {
     z-index: 20 !important;
+    background-color:#fff;
 }
 
 #responsive-wrapper .main-sidebar-content {
-    height: 680px;
-}
-
-/*main-menu-header  styles */
-.sidebar-treeview .res-main-menu .main-menu-header {
-    color: #223347;
-    padding: 15px 15px 15px 0;
-    font-size: 14px;
-    width: 13em;
-    margin: 0;
-}
-
-#main-text .sidebar-heading {
-    font-size: 16px;
-}
-
-.e-bigger #main-text .sidebar-heading {
-    font-size: 18px;
-}
-
-/* table of content area styles */
-.sidebar-treeview .table-content {
-    padding: 20px 18px;
-    height: 8em;
-}
-
-.material .sidebar-treeview .table-content {
-    padding: 20px 14px;
-}
-
-.highcontrast .sidebar-treeview .table-content {
-    padding: 20px 18px;
-}
-
-.e-bigger .sidebar-treeview .table-content {
-    padding: 20px 27px;
-}
-
-/* end of table ofcontent area styles */
-/* content area styles */
-#main-text .sidebar-content .line {
+    height: 100%;
+    Display: block;
+    background-color: #f1f1f1;
+    /* height: auto; */
     width: 100%;
-    height: 1px;
-    border-bottom: 1px dashed #ddd;
-    margin: 40px 0;
+    position: absolute;
 }
 
 #main-text .sidebar-content {
     padding: 15px;
-    font-size: 14px;
-}
-
-.e-bigger #main-text .sidebar-content {
     font-size: 16px;
-}
-
-#main-text .paragraph-content {
-    padding: 15px 0;
-    font-weight: normal;
-    font-size: 14px;
+    background-color: #f8f8f8;
+    height: 100%;
+    width: 100%;
 }
 
 /* end of content area styles */
@@ -104,52 +54,64 @@
 
 .sidebar-treeview .main-treeview .icon {
     font-family: 'fontello';
-    font-size: 16px;
-    margin: -4px 0;
+    font-size: 24px;
+    margin: -4px 0px;
 }
 
-#responsive-wrapper .e-toolbar .e-icons {
-    font-size: 20px;
+.e-toolbar .e-toolbar-item {
+    background: #2177d0;
 }
 
+#e-tbr-btn_0{
+    background-color: #2177d0;
+}
+
+.titleStyle{
+    background-color: #2177d0;
+}
+
+/* CSS de l'image du titre */
 #responsive-wrapper .e-tbar-menu-icon:before {
-    content: '\e914';
-    font-family: 'sbicons';
+    content: '\e806';
+    font-family: 'fontello';
+    font-size: 24px;
+    background-color: #2177d0;    
 }
 
-.e-bigger .e-folder {
-    font-size: 18px;
+/* CSS du text du titre */
+.e-folder{
+    color: #f6f6f6;
+    font-size: 24px;
+    font-style: italic;
+    background-color: #2177d0;    
 }
-
-.e-folder {
-    text-align: center;
-    font-weight: 500;
-    font-size: 16px
-}
-
 
 /* Specifies sample level styles for TreeView*/
 .sidebar-treeview .e-treeview .e-icon-collapsible,
 .sidebar-treeview .e-treeview .e-icon-expandable {
     float: right;
     margin: 3px;
+    color: #000;
 }
-
-
 
 .sidebar-treeview .e-treeview,
 .sidebar-treeview .e-treeview .e-ul {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
+    
 }
 
+/* CSS des images */
 .sidebar-treeview .e-treeview .e-text-content {
     padding-left: 18px;
+    color:#757575;
 }
 
-
-.e-bigger .sidebar-treeview .e-treeview .e-text-content {
-    padding-left: 22px;
+/* CSS du text */
+.ename{
+    color: #000;
+    margin-left: 5px;
+    font-size: 16px;
 }
 
 .sidebar-treeview .main-treeview .icon-microchip::before {
@@ -196,3 +158,10 @@
     content: '\e808';
 }
 
+.e-toolbar .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child {
+    margin-left: 0px;
+}
+
+.e-toolbar .e-toolbar-items:first-child>.e-toolbar-item:last-child, .e-toolbar .e-toolbar-items:first-child>.e-toolbar-right .e-toolbar-item:last-child {
+    margin-right: 0px;
+}

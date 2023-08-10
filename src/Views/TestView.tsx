@@ -3,7 +3,7 @@ const TestView = () =>{
 
     return (
         <div>
-            test hiiiii
+            Layout générale
         </div>
     )
 }

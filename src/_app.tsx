@@ -62,22 +62,32 @@ const  _app = () =>{
     const target: string = '.main-sidebar-content';
 	const mediaQuery: string = '(min-width: 600px)';
     const fields: object = { dataSource: data, id: 'nodeId', text: 'nodeText', child: 'nodeChild', iconCss: "iconCss" };
+
+    //let folderEle: string = '<div class= "e-folder"><div class= "e-folder-name">Scada</div></div>';
     let folderEle: string = '<div class= "e-folder"><div class= "e-folder-name">Scada</div></div>';
+    
+    function nodeTemplate(data:any) {
+        return (
+            <div className='ename'>{data.nodeText}</div>
+        );
+    }
+    
+    
     //toggle the sidebar
     const toolbarCliked = (): void => {
         sidebarobj.current.toggle();
     }
 
     const handleNodeSelected = (args:any) =>{
-        console.log(args.nodeData.id)
+        //console.log(args.nodeData.id)
         window.location.pathname = "/test2view"
     }
 
     return(
         <div className="control-section" id="responsive-wrapper">
-            <div id="reswrapper">
+            <div>
                 <div>
-                    <ToolbarComponent id="resToolbar" clicked={toolbarCliked.bind(this)}>
+                    <ToolbarComponent  className='titleStyle' clicked={toolbarCliked.bind(this)}>
                         <ItemsDirective>
                             <ItemDirective prefixIcon="e-tbar-menu-icon tb-icons" tooltipText="Menu"></ItemDirective>
                             <ItemDirective template={folderEle}></ItemDirective>
@@ -87,10 +97,10 @@ const  _app = () =>{
                 {/* end of header-section */}
                 <SidebarComponent id="sideTree" className="sidebar-treeview" ref={sidebarobj}
                 target={target} mediaQuery={mediaQuery} enableDock={true} dockSize="50px" width="220px" position='Left'>
-                    <div className='res-main-menu11111'>
+                    <div>
                         <div>
                             <TreeViewComponent id='mainTree' cssClass="main-treeview" fields={fields} expandOn='Click'
-                            nodeSelected={handleNodeSelected}/>
+                            nodeSelected={handleNodeSelected} nodeTemplate={nodeTemplate}/>
                         </div>
                     </div>
                 </SidebarComponent>
