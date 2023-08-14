@@ -27,12 +27,14 @@ html,body{
 #head{
   min-height: 33px;
   height: 4%;
+  
   background-color: #2177d0;
   display: flex;
   align-items: center;
 }
 
-.content{
+.mainContent{
+  display:block;
   height:96%;
   width: 100%;
   position:relative;
@@ -161,6 +163,13 @@ html,body{
 
 /***********************CSS General********************************************/
 
+.divContainer{
+  position: relative;
+  display: block;
+  height: 100%;
+  background-color: #000;
+}
+
 .mainHeader{
   position: relative;
   width: 100%;
@@ -184,6 +193,25 @@ html,body{
   display:block;
   background-color:brown;
 }
+
+h1{
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.mainContainer{
+  position: relative;
+  width: auto;
+  height: 90%;
+  background-color: #f7f7f7;
+  text-align: center;
+  
+  display:block;
+  background-color: #2177d0;
+}
+
+
 
 /***********************CSS du users********************************************/
 .userBtn{

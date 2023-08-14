@@ -60,7 +60,7 @@ const EtatTouffeteur = () =>{
     
 
     return(
-        <div>
+        <div className='divContainer'>
             <div className='mainHeader'>
                         <div className='item'>                            
                                 <label style={{fontSize:'20px',marginRight:'20px'}}>Date début : </label>
@@ -74,50 +74,56 @@ const EtatTouffeteur = () =>{
                                 <ButtonComponent onClick={handleClick}>Validez</ButtonComponent>
                         </div>                    
                 </div>
-
-                <GridComponent
-				dataSource={data}
-				allowResizing={true}
-				allowReordering={true}
-				allowTextWrap={true}
-				ref={gridobj}
-				toolbar={toolbarOptions}
-				allowExcelExport={true}
-				toolbarClick={toolbarClick}
-				showColumnChooser={true}>
-				<ColumnsDirective>
-					<ColumnDirective field='tuffterName' headerText='Touffeteur' width='100' textAlign='Center' />
-					<ColumnDirective
-						field='totalHours'
-						headerText='Heures Intéral'
-						width='100'
-						textAlign='Center'
-						type='number'
-					/>
-					<ColumnDirective
-						field='totalTimeOn'
-						headerText='Heures On (Hrs)'
-						width='100'
-						textAlign='Center'
-						format='N2'
-					/>
-					<ColumnDirective
-						field='totalTimeOff'
-						headerText='Heures Off (Hrs)'
-						width='100'
-						textAlign='Center'
-						format='N2'
-					/>
-					<ColumnDirective
-						field='efficiency'
-						headerText='Pourcentage On (%)'
-						width='100'
-						textAlign='Center'
-						format='N2'
-					/>
-				</ColumnsDirective>
-				<Inject services={[ Resize, Reorder, Toolbar, ExcelExport, ColumnChooser ]} />
+                <div className='mainContainer'>
+                        <GridComponent
+                                        dataSource={data}
+                                        allowResizing={true}
+                                        allowReordering={true}
+                                        allowTextWrap={true}
+                                        ref={gridobj}
+                                        toolbar={toolbarOptions}
+                                        allowExcelExport={true}
+                                        toolbarClick={toolbarClick}
+                                        showColumnChooser={true}
+                                        height={"100%"}
+                                        width={'100%'}
+                                        >
+                                        <ColumnsDirective>
+                                                <ColumnDirective field='tuffterName' headerText='Touffeteur' textAlign='Center' />
+                                                <ColumnDirective
+                                                        field='totalHours'
+                                                        headerText='Heures Intéral'
+                                                        
+                                                        textAlign='Center'
+                                                        type='number'
+                                                />
+                                                <ColumnDirective
+                                                        field='totalTimeOn'
+                                                        headerText='Heures On (Hrs)'
+                                                        
+                                                        textAlign='Center'
+                                                        format='N2'
+                                                />
+                                                <ColumnDirective
+                                                        field='totalTimeOff'
+                                                        headerText='Heures Off (Hrs)'
+                                                        
+                                                        textAlign='Center'
+                                                        format='N2'
+                                                />
+                                                <ColumnDirective
+                                                        field='efficiency'
+                                                        headerText='Pourcentage On (%)'
+                                                        
+                                                        textAlign='Center'
+                                                        format='N2'
+                                                />
+                                        </ColumnsDirective>
+                                        <Inject services={[ Resize, Reorder, Toolbar, ExcelExport, ColumnChooser ]} />
 			</GridComponent>
+                </div>
+
+                
         </div>
     )
 }

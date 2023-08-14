@@ -15,7 +15,7 @@ const UseCallApi=async(param:any) =>{
 		};
 		//console.log("getInfoTuffter ",params)
 		try {
-			const tuffterInfo = await axios.get('http://localhost:5001/api/Scada/GetTuffterInfo?'+ querystring.stringify(params));
+			const tuffterInfo = await axios.get('http://itvxscada:5001/api/Scada/GetTuffterInfo?'+ querystring.stringify(params));
 			return tuffterInfo.data;
 		} catch (err) {
 			// Handle Error Here
@@ -25,6 +25,49 @@ const UseCallApi=async(param:any) =>{
     }
 
 
+	/***********************************************Page Beamer**************************************************/
+
+	if (param.action == 'getInfoBeamer') {
+		const params = {
+			date1: param.valeur1,
+			date2: param.valeur2
+		};
+
+		try {
+			const beamerInfo = await axios.get(
+				'http://itvxscada:5001/api/BeamingInfo/GetBeamingInfo?' + querystring.stringify(params)
+			);
+			return beamerInfo.data;
+		} catch (err) {
+			// Handle Error Here
+			console.error(err);
+			return [];
+		}
+	}
+
+	/***********************************************Page StatBeamer**************************************************/
+
+	if (param.action == 'getStatBeaming') {
+						
+		const params = {
+			date1: param.valeur1,
+			date2: param.valeur2
+		};
+
+		//console.log(params);
+
+		try {
+			const beamingInfo = await axios.get(
+				'http://itvxscada:5001/api/BeamingProduction/beamingScadaStat?' + querystring.stringify(params)
+			);
+			return beamingInfo.data;
+		} catch (err) {
+			// Handle Error Here
+			console.error(err);
+			return [];
+		}
+		
+	}
 
 	/***********************************************Page Users**************************************************/
 

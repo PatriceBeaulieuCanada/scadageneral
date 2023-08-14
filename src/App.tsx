@@ -1,7 +1,7 @@
 import './App.css';
 import RouteView from './Routes/RouteView';
 import {useRef} from 'react';
-import { SidebarComponent,TreeViewComponent } from '@syncfusion/ej2-react-navigations';
+import { SidebarComponent,TreeViewComponent,SidebarType } from '@syncfusion/ej2-react-navigations';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import TreeView from './TreeView/TreeView';
 import FinitionShipping from './Views/FinitionShipping';
@@ -36,6 +36,7 @@ import RapportFinMois from './Views/Energy/RapportFinMois';
 function App() {
 
   let sidebarobj:any = useRef<SidebarComponent>(null);
+  let type: SidebarType = "Auto";
 
   //toggle the sidebar
   const toolbarCliked = (): void => {
@@ -57,22 +58,22 @@ const handleNodeSelected = (args:any) =>{
   return (
     <div className="control-section">
       <div id="wrapper">
-        <SidebarComponent ref={sidebarobj} id="sideTree" className="sidebar-treeview"
-            enableDock={true} dockSize="50px" width="220px" position='Left' target={'.content'}>
-                <div>
+          <SidebarComponent ref={sidebarobj} id="sideTree" className="sidebar-treeview" type={type}
+              enableDock={true} dockSize="50px" width="220px" position='Left' target={'.mainContent'}>
                   <div>
-                    <TreeViewComponent id='mainTree' cssClass="main-treeview" fields={fields} expandOn='Click'
-                    nodeSelected={handleNodeSelected} nodeTemplate={nodeTemplate}/>
+                    <div>
+                      <TreeViewComponent id='mainTree' cssClass="main-treeview" fields={fields} expandOn='Click'
+                      nodeSelected={handleNodeSelected} nodeTemplate={nodeTemplate}/>
+                    </div>
                   </div>
-                </div>
-        </SidebarComponent>
+          </SidebarComponent>
         <div id="head">
           <img className='imgHeader' src='/menu.png' alt='menuIcon' onClick={toolbarCliked}/>
           <label className='lblHeader'>Scada</label>
          </div>
 
-         <div id="maincontent" className="content">
-                     <div>
+         <div id="maincontent1" className="mainContent">
+          
                      <Router>
                         <Routes>
                           <Route path="/finitionshipping" element={<FinitionShipping/>}/>
@@ -102,7 +103,7 @@ const handleNodeSelected = (args:any) =>{
                           <Route path="/rapportfinmois" element={<RapportFinMois/>}/>
                         </Routes>
                       </Router>
-                     </div>
+                    
                  </div>
           </div>
       </div>
